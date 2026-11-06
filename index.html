@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미니 테트리스</title>
+    <style>
+        body {
+            background-image: url('image.PNG');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: -1;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            font-size: 2rem;
+            color: #00ffcc;
+            text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+            z-index: 1;
+        }
+
+        .game-container {
+            display: flex;
+            background: rgba(42, 42, 42, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            z-index: 1;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .panel {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 130px;
+        }
+
+        .box {
+            background: #333;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .box canvas {
+            margin-top: 5px;
+            background: #000;
+            border: 1px solid #444;
+        }
+
+        canvas#tetris {
+            border: 2px solid #444;
+            background-color: #000;
+        }
+
+        .score-board {
+            font-size: 1.1rem;
+        }
+
+        .controls-guide {
+            font-size: 0.8rem;
+            color: #aaa;
+            line-height: 1.4;
+            text-align: left;
+        }
+
+        button {
+            background-color: #00ffcc;
+            color: #000;
+            border: none;
+            padding: 10px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.2s;
+            width:
